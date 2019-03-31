@@ -6,6 +6,13 @@ using System.Threading.Tasks;
 
 namespace BoardGame
 {
+    // Brittney: BoardGame Code Review
+
+    // Program works correctly, it was just not checking for height and width = 30
+    // Program is very well Objectified, it has separate class file
+    // Found usage of var in place of int, mentioned to Brittney about the same
+    // Usage of proper variable names for DrawBoard, DrawTopBorder and DrawCells 
+    // methods (in place of variables like 'i' and 'j') 
     class Program
     {
         static void Main(string[] args)
