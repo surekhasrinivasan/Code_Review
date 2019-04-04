@@ -51,5 +51,5 @@ namespace BoardGame
 
             Console.Write("+\n");
         }
-    }
+    }    
 }
