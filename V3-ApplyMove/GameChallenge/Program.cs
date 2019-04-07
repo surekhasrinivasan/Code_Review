@@ -12,9 +12,10 @@ namespace GameChallenge
         {
             Board newBoard = new Board();
             newBoard.DrawGameBoard();
-            Game newGame = new Game();
-
-            Console.ReadLine();
+            Game newGame = new Game(1, 2, 0);
+            int[,] inputArr = new int[7, 6];
+            newGame.applyMove(inputArr);
+            //Console.ReadLine();
         }
     }
 }
