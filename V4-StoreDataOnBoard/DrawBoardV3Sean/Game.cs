@@ -22,7 +22,9 @@ namespace DrawBoardV3Sean
             {
                 for (int j = 0; j < c; j++)
                 {
-                    GameState[i, j] = '.';
+                    //GameState[i, j] = '.';
+                    GameState[i, j] = '|';
+                    //Console.WriteLine('+');
                 }
             }
         }
@@ -42,19 +44,17 @@ namespace DrawBoardV3Sean
         }
 
         // represents the player and the column they intend to drop the chip
-        public void ApplyMove(char p, int c)
+        public void ApplyMove(char p, int col)
         {
-            int j;
-            for (j = 0; j < GameState.GetLength(0); j++)
+            int row;
+            for (row = 0; row < GameState.GetLength(0); row++)
             {
-                if (GameState[j,c] != '.') break;
+                //if (GameState[row, col] != '.') break;
+                if (GameState[row, col] != '|') break;
             }
-            Console.WriteLine("j = {0}; c = {1}",j,c);
-            this.GameState[j - 1, c] = p;
-            //Console.WriteLine(this.GameState[j - 1, c] = p);
-
+            Console.WriteLine("The player selection is row = {0}; col = {1}", row, col);
+            GameState[row - 1, col] = p;
+            //Console.WriteLine(this.GameState[j - 1, c] = p);            
         }
-
-
     }   
 }

@@ -10,8 +10,6 @@ namespace DrawBoardV3Sean
     {
         static void Main(string[] args)
         {
-            
-
             Console.WriteLine("select amount of rows");
             int rows = Convert.ToInt32(Console.ReadLine());
 
@@ -19,24 +17,21 @@ namespace DrawBoardV3Sean
             int columns = Convert.ToInt32(Console.ReadLine());
             Board newBoard = new Board();
             
-
             Game game = new Game(6, 7, 'x', 'o');
            
             newBoard.BuildBoard(rows, columns);
+            //newBoard.BuildBoard()
 
             game.ApplyMove(game.player1, 1);
+            game.ApplyMove(game.player2, 2);
 
-            foreach(char i in game.GameState)
-            {
-                Console.Write("{0}", i);
-                
-            }
-            Console.WriteLine();
-            //game.PrintGameState();
+            //foreach (char i in game.GameState)
+            //{
+            //    Console.Write("{0}", i);
 
- 
-
-
+            //}
+            //Console.WriteLine();
+            game.PrintGameState();
         }
     }
 }
